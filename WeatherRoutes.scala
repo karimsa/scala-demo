@@ -9,11 +9,6 @@ import akka.http.scaladsl.server.Route
 import akka.http.scaladsl.unmarshalling.Unmarshaller
 import akka.util.Timeout
 
-/**
- * HTTP API for
- * 1. Receiving data from remote weather stations
- * 2. Receiving and responding to queries
- */
 private[killrweather] final class WeatherRoutes(system: ActorSystem[_]) {
 
   private val sharding = ClusterSharding(system)
